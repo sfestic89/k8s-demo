@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: shopui-svc
+  labels:
+    app: shopui
+spec:
+  type: ClusterIP
+  selector:
+    app: shopui
+  ports:
+  - port: 80
+    targetPort: 80
